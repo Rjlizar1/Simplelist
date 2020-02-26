@@ -14,8 +14,8 @@ class SimpleListTest {
 		//fail("Not yet implemented");
 	}
 
-	@Test
-	void testAdd() {
+//	@Test
+/*	void testAdd() {
 		//fail("Not yet implemented");
 		SimpleList test = new SimpleList();
 
@@ -91,5 +91,5 @@ class SimpleListTest {
 		test.add(5);
 		
 		assertEquals("4 found in position 1",1,test.search(4)); //checks if 4 is in position one
-	}
+	}*/
 }

@@ -18,8 +18,12 @@ public class SimpleList
 		count = 0;				//count is amount in array
 	}
 
-	public void add(int num)
-	{											//adds number
+	public void add(int num)		//adds number
+	{
+		if(count == size)				//check if list is full
+		{
+			size = size + (size*(1/2));		//increases by 50%
+		}
 		for(int i = size; i > 0; i=i-1)	//moves backwards through list
 		{
 			list[i] = list[i-1];		//moves list up
@@ -42,6 +46,13 @@ public class SimpleList
 				list[found] = list[found+1];	//moves numbers back
 			}			
 			count--;			//decreases count
+		}
+		
+		int decrease_check = size - (size*(1/4));	//find 25% less than full
+		
+		if(count<decrease_check)	//if less then 25% is empty
+		{
+			size = decrease_check;		//decrease the size
 		}
 	}
 	
