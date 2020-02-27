@@ -113,6 +113,19 @@ public class SimpleList
 		}
 	}
 	
+	public int last()
+	{
+		if (size == 0)
+		{
+			return -1;
+		}
+		else
+		{
+			return list[count];
+		}
+		
+	}
+	
 	public int size()
 	{
 		return size;			//returns size of list
