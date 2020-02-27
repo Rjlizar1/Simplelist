@@ -13,7 +13,7 @@ public class SimpleList
 	
 	public SimpleList()
 	{
-		int size = 10;			//initial size
+		size = 10;			//initial size
 		list = new int[size];	//creates list
 		count = 0;				//count is amount in array
 	}
@@ -88,6 +88,34 @@ public class SimpleList
 			}
 		}
 		return found;			//returns found
+	}
+	
+	public void append(int num)
+	{
+		if(count == size)   //if list is full
+		{
+			size = size + (size * (1/2));  //add 50% to size
+		}
+		
+		count++;
+		list[count]=num;	//add variable to end
+	}
+	
+	public int first()
+	{
+		if (size == 0)
+		{
+			return -1;
+		}
+		else
+		{
+			return list[0];			//returns first variable
+		}
+	}
+	
+	public int size()
+	{
+		return size;			//returns size of list
 	}
 }
 
